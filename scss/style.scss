@@ -1,0 +1,631 @@
+@font-face {
+    font-family: 'GTWalsheimPro';
+    src: url('../fonts/gtpro/gt-walsheim-bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'GTWalsheimPro';
+    src: url('../fonts/gtpro/gt-walsheim-medium.ttf');
+    font-weight: 500;
+}
+
+
+$gtprofont: GTWalsheimPro;
+$mainDark: #131417;
+
+%text-container {
+    margin-left: 13.75vh;
+    width: 470px;
+    float: left;
+}
+
+%title-font {
+    font-family: $gtprofont;
+    font-size: 60px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -1.2px;
+    @extend %back-clip;
+}
+
+%text-font {
+    font-family: $gtprofont;
+    font-size: 32px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: -0.5px;
+    margin-top: 15px;
+    display: block;
+}
+
+%big-title-font {
+    font-family: $gtprofont;
+    font-size: 100px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.3;
+    letter-spacing: -2px;
+}
+
+%back-clip {
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 681.5vh;
+}
+
+.top-bar {
+    height: 62px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.content {
+    width: 1260px;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: right;
+}
+
+ul.menu li {
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.nav-link {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: $gtprofont;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    transition: color 1s;
+}
+
+.nav-link-black {
+    color: $mainDark;
+}
+
+.done {
+    transition: color 1s;
+}
+
+.done-black {
+    color: $mainDark;
+}
+
+.done-white {
+    color: white;
+}
+
+.done-blue {
+    background-image: linear-gradient(119deg, #ade8cc 51%, #82a9e0);
+    @extend %back-clip;
+}
+
+.done-purple {
+    background-image: linear-gradient(119deg, #7561ec 51%, #a386ff);
+    @extend %back-clip;
+}
+
+.done-pink {
+    @extend %back-clip;
+    background-image: linear-gradient(112deg, #ff9ec1 49%, #f92f79 110%);
+}
+
+.logo {
+    float: left;
+}
+
+.navigation {
+    float: right;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.screen {
+    width: 100%;
+    height: 100vh;
+}
+
+#screen1 {
+    background-image: linear-gradient(119deg, rgba(182, 110, 212, 1), rgba(255, 221, 61, 1));
+    .text-container1, .text-container2 {
+        text-align: center;
+        transition: transform 0.5s, visibility 0.5s, opacity 0.5s;
+        will-change: transform, opacity, visibility;
+        opacity: 1;
+    }
+
+    .text-container10 {
+        text-align: center;
+        opacity: 0;
+        margin-top: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 25vh;
+        transform: translateY(25vh);
+        left: 0;
+        transition: transform 0.5s 1s, visibility 0.5s 1s, opacity 0.5s 1s;
+        will-change: transform, opacity, visibility;
+    }
+
+    #bg-wrapper {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(19, 20, 23, 1);
+        transition: background 0.5s 0.5s;
+    }
+}
+
+.text-container1, .text-container10 {
+    margin-top: 25vh;
+    width: 100%;
+
+    span {
+        line-height: 1.3;
+        color: white;
+    }
+}
+
+.text-container2 {
+    margin-top: 5px;
+    width: 100%;
+
+    span {
+        line-height: 1.2;
+        background-image: linear-gradient(95deg, #b66ed4 0%, #ffdd3d 84%);
+        @extend %back-clip;
+    }
+}
+
+.text-container1 span, .text-container2 span, .text-container10 span {
+    font-family: $gtprofont;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: -2px;
+    font-size: 100px;
+}
+
+#screen3 {
+    margin: 0 auto;
+    margin-top: 0;
+    background-color: white;
+    width: 87.5%;
+    border-radius: 40px;
+    transition: margin 0.5s 1s, opacity 0.5s 1s;
+}
+
+.text-container3 {
+    @extend %text-container;
+    margin-top: 207px;
+
+    .title1 {
+        background-image: linear-gradient(103deg, #7561ec, #a386ff 74%);
+        @extend %title-font;
+    }
+
+    .text {
+        @extend %text-font;
+        color: #41454e;
+    }
+}
+
+.image-container {
+    margin-top: 14vh;
+    margin-right: 13.75vh;
+    float: right;
+}
+
+#screen4 {
+    margin: 0 auto;
+    margin-top: -30.5vh;
+    background-color: $mainDark;
+    width: 87.5%;
+    border-radius: 40px;
+    transition: margin 0.5s 1s, opacity 0.5s 1s;
+}
+
+.text-container4 {
+    @extend %text-container;
+    margin-top: 170px;
+
+    .title2 {
+        background-image: linear-gradient(108deg, #ade8cc 1%, #82a9e0 100%);
+        @extend %title-font;
+    }
+
+    .text {
+        @extend %text-font;
+        color: #c3c3c3;
+    }
+}
+
+#screen5 {
+    margin: 0 auto;
+    margin-top: -32.75vh;
+    background-color: white;
+    width: 87.5%;
+    border-radius: 40px;
+}
+
+.text-container5 {
+    @extend %text-container;
+    margin-top: 196px;
+
+    .title3 {
+        background-image: linear-gradient(100deg, #ff9ec1 1%, #f92f79);
+        @extend %title-font;
+    }
+
+    .text {
+        @extend %text-font;
+        color: #41454e;
+    }
+}
+
+#screen6 {
+    margin: 0 auto;
+    margin-top: -32.75vh;
+    background-image: linear-gradient(319deg, #ff5360, #ffa466);
+    width: 87.5%;
+    border-radius: 40px;
+    height: 100vh;
+}
+
+.text-container6 {
+    margin-top: 92px;
+    text-align: center;
+
+    .title4 {
+        @extend %big-title-font;
+        color: white;
+    }
+}
+
+.card-container {
+    margin-top: 7.5vh;
+    width: 100%;
+    position: relative;
+    padding: 0 110px 50px 110px;
+    
+    .splide__slide {
+        margin-right: 20px;
+    }
+
+    .splide__track {
+        border-radius: 20px;
+    }
+
+    .splide__arrow {
+        width: 60px;
+        height: 60px;
+        border: solid 4px white;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .splide__arrow--prev:after {
+        content: '';
+        width: 18px;
+        height: 18px;
+        transform: rotate(-45deg);
+        border-top: solid 4px white;
+        border-left: solid 4px white;
+        position: absolute;
+        left: 20px;
+    }
+
+    .splide__arrow--next:after {
+        content: '';
+        width: 18px;
+        height: 18px;
+        transform: rotate(-45deg);
+        border-bottom: solid 4px white;
+        border-right: solid 4px white;
+        position: absolute;
+        right: 20px;
+    }
+
+    .splide__arrow svg {
+        display: none;
+    }
+
+    .splide__pagination__page {
+        width: 20px;
+        height: 20px;
+        opacity: 0.25;
+        background-color: white;
+
+        &:hover {
+            opacity: 0.5;
+        }
+
+        &.is-active {
+            opacity: 1;
+        }
+    }
+
+    .splide__pagination li {
+        margin-right: 13px;
+
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+}
+
+.card {
+    opacity: 1;
+    width: 1040px;
+    height: 420px;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 2.5vh;
+    padding: 35px 50px 40px 50px;
+    box-sizing: border-box;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    margin: 0 auto;
+
+    .title {
+        font-family: $gtprofont;
+        font-size: 50px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.28;
+        letter-spacing: -1px;
+        color: $mainDark;
+    }
+
+    .description {
+        font-family: $gtprofont;
+        font-size: 28px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.29;
+        letter-spacing: -0.5px;
+        color: #41454e;
+        margin-top: 1.875vh;
+        transition: color 0.3s;
+    }
+
+    .card-button {
+        width: 26.25vh;
+        height: 7vh;
+        background-color: white;
+        border-radius: 20px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        margin-top: 13vh;
+        border: solid 4px $mainDark;
+        position: absolute;
+        bottom: 5vh;
+        font-family: $gtprofont;
+        font-size: 24px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.42;
+        letter-spacing: -0.5px;
+        color: $mainDark;
+        transition: color 0.3s;
+        transition: border 0.3s;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            background-color: $mainDark;
+            color: white;
+        }
+    }
+
+    &.molamola {
+        background-image: url("../images/cards/molamola/color.jpg");
+    }
+
+    &.costposter {
+        background-image: url("../images/cards/cost/color.jpg");
+    }
+
+    &.pairs {
+        background-image: url("../images/cards/pairs/color.jpg");
+    }
+
+    &.gymfit {
+        background-image: url("../images/cards/gymfit/color.jpg");
+    }
+
+    &.cally {
+        background-image: url("../images/cards/cally/color.jpg");
+    }
+}
+
+#screen7 {
+    margin: 0 auto;
+    background-color: white;
+
+    .title5 {
+        @extend %big-title-font;
+        color: $mainDark;
+        margin-top: 22.75vh;
+    }
+
+    .button-block {
+        margin-top: 7.5vh;
+
+        >span {
+            font-family: $gtprofont;
+            font-size: 26px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.38;
+            letter-spacing: -0.5px;
+            color: $mainDark;
+            margin-left: 3.75vh;
+            margin-right: 3.75vh;
+        }
+    }
+
+    .connection-button {
+        display: inline-block;
+        cursor: pointer;
+        background-color: white;
+        font-family: $gtprofont;
+        font-size: 26px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.38;
+        letter-spacing: -0.5px;
+        color: $mainDark;
+        padding: 22px 45px;
+        border-radius: 15px;
+        border-style: solid;
+        border-width: 4px;
+        border-image-source: linear-gradient(290deg, #32c5ff, #b620e0 49%, #f7b500);
+        border-image-slice: 1;
+        background-image: linear-gradient(to bottom, white, white), linear-gradient(290deg, #32c5ff, #b620e0 49%, #f7b500);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        
+        & span {
+            transition: background-image 0.3s;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            span {
+                background-image: linear-gradient(300deg, #32c5ff, #b620e0, #f7b500);
+                @extend %back-clip;
+            }      
+        }
+    }
+}
+
+.footer-container {
+    padding-bottom: 31px;
+    box-sizing: border-box;
+    margin-top: -51px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1260px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        text-align: right;
+
+        li {
+            display: inline-block;
+            padding-left: 20px;
+        }
+    }
+
+    .contact-link {
+        font-family: $gtprofont;
+        font-size: 16px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: right;
+        color: $mainDark;
+        text-decoration: none;
+    }
+}
+
+#screen3, #screen4, #screen5, #screen6 {
+    transition: width 1s, border-radius 1s;
+}
+//scroll
+#well {
+    position: relative;
+	overflow: hidden;
+	transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+body {
+    overflow: hidden;
+}
+
+.carousel {
+    width: 1260px;
+    float: left;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+    .molamola {
+        background-image: url("../images/cards/molamola/color@2x.jpg");
+    }
+
+    .costposter {
+        background-image: url("../images/cards/cost/color@2x.jpg");
+    }
+
+    .pairs {
+        background-image: url("../images/cards/pairs/color@2x.jpg");
+    }
+
+    .gymfit {
+        background-image: url("../images/cards/gymfit/color@2x.jpg");
+    }
+
+    .cally {
+        background-image: url("../images/cards/cally/color@2x.jpg");
+    }
+}
